@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --green: #16a085;
+    --black: #444;
+    --light-color: #777;
+    --text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s ease-out;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--black);
+    font-size: 4rem;
+}
+
+.heading span {
+
+    color: rgb(14, 78, 101);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .5rem;
+    padding-left: 1rem;
+    border: var(--border);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    color: black;
+    cursor: pointer;
+    font-size: 1.7rem;
+    background: #fff;
+}
+
+.btn span {
+    padding: .7rem 1rem;
+    border-radius: .5rem;
+    background: rgb(14, 78, 101);
+    color: #fff;
+    margin-left: .5rem;
+}
+
+.btn:hover {
+    background: rgb(14, 78, 101);
+    color: #fff;
+}
+
+.btn:hover span {
+    color: var(--green);
+    background: #fff;
+    margin-left: 1rem;
+}
+
+.header {
+    padding: 2rem 9%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.header .logo i {
+    color: rgb(14, 78, 101);
+}
+
+.header .navigation a {
+    font-size: 1.7rem;
+    color: black;
+    margin-left: 2rem;
+}
+
+.header .navigation a:hover {
+    color: var(--green);
+}
+
+#menu-btn {
+    font-size: 2.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: black;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.homepage {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 10rem;
+    background-image: url("D:/major/image/16.jpg");
+}
+
+.homepage .image {
+    flex: 1 1 45rem;
+}
+
+.homepage .image img {
+    width: 100%;
+    margin-top: -7rem;
+}
+
+.homepage .content {
+    flex: 1 1 45rem;
+}
+
+.homepage .content h3 {
+    font-size: 4.7rem;
+    color: brown;
+    line-height: 1.8;
+    text-shadow: var(--text-shadow);
+    margin-top: -10rem;
+}
+
+.homepage .content p {
+    font-size: 1.9rem;
+    color: black;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+.Resume .Resbox-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 3rem;
+}
+
+.Resume .Resbox-container .box {
+    text-align: center;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.668);
+    padding: 2rem;
+}
+
+.Resume .Resbox-container .box img {
+    height: 30rem;
+    border: var(--border);
+    border-radius: .5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.Resume .Resbox-container .box h3 {
+    color: black;
+    font-size: 2.5rem;
+}
+
+.Resume .Resbox-container .box span {
+    font-size: 1.5rem;
+}
+
+.Resume .Resbox-container .box .share {
+    padding-top: 2rem;
+}
+
+.Resume .Resbox-container .box .share a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    color: rgb(14, 78, 101);
+    border-radius: .5rem;
+    border: var(--border);
+    margin: .3rem;
+}
+
+.Resume .Resbox-container .box .share a:hover {
+    background: rgb(14, 78, 101);
+    color: #fff;
+}
+
+
+/*-----------------------------------*\
+ * #ABOUT
+\*-----------------------------------*/
+
+.h2 {
+    font-size: 3.9rem;
+    line-height: 1.6;
+}
+
+.about {
+    padding-block: var(--section-padding);
+}
+
+.about-banner {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.about-img {
+    width: 100%;
+}
+
+.play-btn {
+    position: absolute;
+    bottom: 24%;
+    right: 8%;
+    background: whitesmoke;
+    width: 80px;
+    height: 80px;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    border-radius: 50%;
+}
+
+.play-btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1px solid black;
+    animation: pulseAnim 2s forwards infinite;
+}
+
+
+
+@keyframes pulseAnim {
+
+    0% {
+        transform: scale(1);
+        border-color: var(--black);
+    }
+
+    100% {
+        transform: scale(1.5);
+        border-color: transparent;
+    }
+
+}
+
+.about-title {
+    margin-bottom: 30px;
+}
+
+.about .section-text {
+    margin-bottom: 50px;
+}
+
+.handwash .heading {
+    text-align: center;
+    padding: 1rem;
+    font-size: 4rem;
+}
+
+.handwash .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.handwash .box-container .box {
+    background: #fff;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    margin: 2rem;
+    margin-top: 3rem;
+    padding: 2rem 3.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.handwash .box-container .box img {
+    height: 20rem;
+    width: 20rem;
+}
+
+.handwash .box-container .box h3 {
+    font-size: 2rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.handwash .box-container .box span {
+    display: block;
+    position: absolute;
+    top: -2rem;
+    left: -2rem;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: white;
+    background: rgb(14, 78, 101);
+    border-radius: 5rem;
+}
+
+.footer {
+    min-height: auto;
+    padding-top: 0;
+}
+
+.footer .box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center
+}
+
+.footer .box-container .box {
+    flex: 1 1 25rem;
+    margin: 2rem;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    color: rgb(14, 78, 101);
+    padding-bottom: 2rem;
+    font-weight:bold;
+}
+
+.footer .box-container .box p {
+    font-size: 1.5rem;
+    color: rgb(14, 78, 101);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box p i {
+    padding-right: 1rem;
+    color: rgb(150, 200, 13);
+}
+
+.footer .credit {
+    padding: 2rem 1rem;
+    text-align: center;
+    color: rgb(14, 78, 101);
+    font-weight: normal;
+    font-size: 2rem;
+    border-top: .1rem solid black;
+}
+
+.footer .credit a {
+    color: rgb(150, 200, 13);
+}
+
+@media (min-width: 1024px) {
+    /**
+   * ABOUT
+   */
+
+    .about .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .about-banner {
+        position: relative;
+        margin-bottom: 0;
+    }
+
+    .about-banner .vector-line {
+        width: 400px;
+        bottom: 50px;
+        left: -50px;
+    }
+
+    .play-btn {
+        width: 100px;
+        height: 100px;
+    }
+
+    .about-content {
+        max-width: unset;
+    }
+
+
+}
+
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 2rem;
+    }
+}
+
+@media (max-width:768px) {
+
+    #menu-btn {
+        display: initial;
+    }
+
+    .header .navigation {
+        position: absolute;
+        top: 115%;
+        right: 2rem;
+        border-radius: .5rem;
+        box-shadow: var(--box-shadow);
+        width: 30rem;
+        border: var(--border);
+        background: #fff;
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: top right;
+        transition: none;
+    }
+
+    .header .navigation.active {
+        transform: scale(1);
+        opacity: 1;
+        transition: .2s ease-out;
+    }
+
+    .header .navigation a {
+        font-size: 2rem;
+        display: block;
+        margin: 2.5rem;
+    }
+
+    .about-banner {
+        max-width: 600px;
+        margin-inline: auto;
+    }
+
+    .about-content {
+        max-width: 600px;
+    }
+
+    h2 {
+        margin-top: -5rem;
+    }
+
+    h4 {
+        margin-top: -3rem;
+    }
+
+    .about-img {
+        margin-top: 7rem;
+    }
+    .handwash .box-container .box img {
+        height: 18rem;
+        width: 22rem;
+    }
+}
+
+@media (max-width:480px) {
+
+    html {
+        font-size: 50%;
+    }
+
+}

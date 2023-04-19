@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <style>
+    #work-expereince-add-btn{
+ 
+ margin-top: -200px;
+   background: transparent;
+   color: blue;
+   border: none;
+ }
+ #work-expereince-add-btn-div{
+   margin-top: -40px;
+   margin-bottom: 10px;
+ }
+ 
+ #work-expereince-textareaT {
+ word-wrap: break-word;
+ }
+ .Editor-Template{
+   display: flex;
+   justify-content: center;
+  gap: 200px;
+ }
+ #sidebar {
+  
+   top: 200px;
+   left: 0px;
+   width: 200px;
+   
+   background-color: #333;
+   color: #fff;
+ }
+ 
+ #sidebar ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+ }
+ 
+ #sidebar ul li {
+   padding: 10px;
+ }
+ 
+ #sidebar ul li a {
+   color: #fff;
+   text-decoration: none;
+ }
+ 
+ .content {
+   margin-left: 200px;
+   padding: 20px;
+ }
+ .Colors-section{
+   font-size: 20px;
+   margin-bottom: 100px;
+ 
+   
+ }
+  </style>
+</head>
+
+<body>
+    
+
+
+
+
+
+<div class="form-step form-step-active">
+    <center><h1>Editor</h1></center>
+    <div class="Colors-section">
+      <center>
+        <input type="radio" id="color-template" name="color" value="default">Default
+      <input type="radio" id="color-template" name="color" value="blue">Bule    
+      <input type="radio" id="color-template" name="color" value="red">red 
+      <input type="radio" id="color-template"  name="color" value="green">green
+      <input type="radio" id="color-template" name="color" value="black">black
+      <input type="radio" id="color-template" name="color" value="yellow">yellow
+      <input type="radio" id="color-template" name="color" value="grey">grey
+      <input type="radio" id="color-template" name="color" value="pink">pink
+      <button onclick="colorchangere()" >save</button>
+    </center>
+    </div>
+  <div class="Editor-Template">
+    <div>
+      <div id="sidebar">
+        <h4>Resume Section</h4>
+        <ul>
+          <li><a href="#"><i class="fa-sharp fa-regular fa-file"></i>Personal Data</a></li>
+          <li><a href="#"><i class="fa-sharp fa-regular fa-file"></i>WorkExperience</a></li>
+          <li><a href="#"><i class="fa-sharp fa-regular fa-file"></i>Education</a></li>
+          <li><a href="#"><i class="fa-sharp fa-regular fa-file"></i>Skill</a></li>
+        </ul>
+      </div>
+      
+  
+      
+    </div>
+   
+  
+     
+    <div class="Template-preview-Editor"> 
+    <div class="container" id="cv-template">
+      <div class="row1  " id="cv-template" >
+        <div class=" text-center background  " id="firsts" >
+          <img src="./NFT.png" class="img-fluid myimg mt-4" alt="" id="photo">
+          <div class="container" id="presnol-info">
+          
+            
+            <h1 id="FirstnameT">Himanshu </h1>
+              <h1 id="LastnameT"></h1>
+            <p id="ProfessionT">Profession</p>
+            <h4 id="contactT">Contact   </h4>
+            <p id="addressT"> <b>Addess</b> </p>
+            <!-- <p id="addressTinfo2"></p>
+            <p id="CountryT"></p>
+            <p id="CityT"></p> -->
+            <p id="pincodeT"></p>
+            <p id="PhoneT"> <b>Phone</b> </p>
+            <p id="PhoneNumberT"></p>
+            <p id="EmailT"> <b>E-mail</b> </p>
+            <p id="EmailidT"></p>
+            
+          </div>
+        </div>
+       
+        <div class="  py-5 " id="second">
+      
+          <p class="" id="IntroductionT">To seek and maintain full-time position that offers professional challenges utilizing interpersonal skills, excellent time management and problem-solving skills.</p>
+          <div class="card mt-4" id="Work-Experience-Div">
+            <div class="card-header " id="abc">
+              
+            <h3>Work History</h3>
+            </div>
+            <div class="card-body" >
+              <div class="container">
+                <div class="row1">
+  <div id="first"><p id="Work-Ex-date">22/01/22</p></div>
+  
+              <div id="secondT">
+                <h5 id="JobtitleT">Software Engineer</h5>
+              
+              <p id="work-ex-address">Shirpur,India</p>
+     
+          <p id="work-expereince-textareaT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, tempora!</p>
+              </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mt-4" id="cardEducationid">
+            <div class="card-header "id="abc">
+            <h3>Education</h3>
+            </div>
+            <div class="card-body" >
+              <div class="container">
+                <div class="row1">
+  <div id="first">
+    <p id="School-Ex-date">22/01/22</p></div>
+  
+              <div id="secondT">
+                <h5 id="DegreeT">Software Engineer</h5>
+              
+                <p id="School-Name-Addrres">Himanshu,Shirpur</p>
+     
+               <p id="Education-textareaT">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, perspiciatis</p>
+             
+             
+              </div>
+  
+                </div>
+              <!-- <ul id="weT">
+                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel iste voluptatibus rerum possimus ipsa obcaecati asperiores accusantium sed nihil aperiam?</li>
+              </ul> -->
+            </div>
+          </div>
+          </div>
+          <div class="card mt-4" id="cardid">
+            <div class="card-header "id="abc">
+            <h3>Certification</h3>
+            </div>
+            <div class="card-body">
+              <ul id="AcadmicT">
+                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel iste voluptatibus rerum possimus ipsa obcaecati asperiores accusantium sed nihil aperiam?</li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+</body>
+</html>

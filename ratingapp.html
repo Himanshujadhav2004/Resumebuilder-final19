@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="add-rating">Add Rating</button>
+<div id="ratings"></div>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-storage.js"></script>
+<script>
+    // Initialize Firebase
+firebase.initializeApp({
+    apiKey: "AIzaSyCZV0Bc1VIgpPclvVr1FOLMRi9a-VpFM10",
+  authDomain: "resume-builder-database.firebaseapp.com",
+  databaseURL: "https://resume-builder-database-default-rtdb.firebaseio.com",
+  projectId: "resume-builder-database",
+  storageBucket: "resume-builder-database.appspot.com",
+  messagingSenderId: "874638902728",
+  appId: "1:874638902728:web:e180e3e1be61adb3e4ecfd",
+  measurementId: "G-1VTQKWFLJW"
+});
+
+const database = firebase.database();
+
+const addBtn = document.getElementById('add-rating');
+const ratingsDiv = document.getElementById('ratings');
+
+addBtn.addEventListener('click', () => {
+  const ratingDiv = document.createElement('div');
+  const ratingText = document.createElement('input');
+  const ratingStars = document.createElement('div');
+  const ratingSubmit = document.createElement('button');
+
+  ratingText.type = 'text';
+  ratingText.placeholder = 'Enter rating text...';
+
+  // Add star rating component here
+
+  ratingSubmit.textContent = 'Submit Rating';
+
+  ratingSubmit.addEventListener('click', () => {
+    const textValue = ratingText.value;
+    const starValue = /* Get star rating value here */
+
+    // Save data to Firebase
+    database.ref('ratings').push({
+      text: textValue,
+      stars: starValue,
+    });
+  });
+
+  ratingDiv.appendChild(ratingText);
+  ratingDiv.appendChild(ratingStars);
+  ratingDiv.appendChild(ratingSubmit);
+
+  ratingsDiv.appendChild(ratingDiv);
+});
+
+// Retrieve data from Firebase
+database.ref('ratings').on('value', (snapshot) => {
+  ratingsDiv.innerHTML = '';
+
+  snapshot.forEach((childSnapshot) => {
+    const childData = childSnapshot.val();
+    const ratingDiv = document.createElement('div');
+    const ratingText = document.createElement('p');
+    const ratingStars = document.createElement('div');
+    const ratingDelete = document.createElement('button');
+
+    ratingText.textContent = childData.text;
+
+    // Add star rating component here
+
+    ratingDelete.textContent = 'Delete Rating';
+
+    ratingDelete.addEventListener('click', () => {
+      // Delete rating from Firebase
+      database.ref(`ratings/${childSnapshot.key}`).remove();
+      // Remove rating HTML elements from the page
+      ratingsDiv.removeChild(ratingDiv);
+    });
+
+    ratingDiv.appendChild(ratingText);
+    ratingDiv.appendChild(ratingStars);
+    ratingDiv.appendChild(ratingDelete);
+
+    ratingsDiv.appendChild(ratingDiv);
+  });
+});
+
+</script>
+</body>
+</html>

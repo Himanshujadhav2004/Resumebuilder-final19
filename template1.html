@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="formstyle.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="formstyle.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+
+.header{
+    padding:1rem 6%;
+   
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+}
+.header .logo{
+    font-size: 2rem;
+    color: var(--black);
+    text-decoration: none;
+}
+    /* Center the form horizontally */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+    .form-step {
+    display: none;
+    transform-origin: initial;
+    animation: animate 0.80s;
+  }
+
+    /* Set the width of the inputs in the first and third rows */
+    input[type=text] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      resize: none;
+    }
+
+    /* Set the width of the inputs in the second row */
+    .input-groups {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .input-groups input[type=text] {
+      width: 48%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      resize: none;
+    }
+
+    .input-groups textarea[type=text] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      resize: none;
+    }
+    /* Set the width of the submit button */
+    input[type=submit] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btnk{
+      margin-top: -3rem;
+    }
+
+    /* Add responsiveness for smaller screens */
+    @media screen and (max-width: 600px) {
+      .input-group input[type=text] {
+        width: 100%;
+        margin-block-end: 5px;
+        margin-block-start: 5px;
+      }
+      
+   
+    }
+
+    /* Center the wrapper div horizontally */
+    .wrappers {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .wrapper-btn {
+      display: flex;
+      justify-content: center;
+gap: 20px;
+    }
+
+    /* Add spacing between the inputs */
+    .input-groups {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 10px;
+      /* Add margin to bottom of the input group */
+
+    }
+
+    
+
+    @keyframes animate {
+    from {
+      transform: scale(1, 0);
+      opacity: 0;
+    }
+
+    to {
+      transform: scale(1, 1);
+      opacity: 1;
+    }
+  }
+
+ input[type=date] {
+        width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      resize: none;
+      }
+
+      .btnk{
+       margin: 0;
+       text-align: center;
+       margin-top: 0.7rem;
+      }
+    /* Add responsiveness for smaller screens */
+    @media screen and (max-width: 600px) {
+      .input-groups input[type=text] {
+        width: 100%;
+      }
+      .btn-upload {
+    
+    background-color:orangered;
+    border: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+margin-top: 0px;
+margin-left: 0%;
+margin: 10px auto;
+    border-radius: 30px;
+  }
+
+   
+      .wrappers {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      #row3 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+
+      }
+      label {
+				display: inline-block;
+			text-align: left;
+			}
+    }
+    label {
+				display: inline-block;
+			text-align: left;
+      justify-content: left;
+			}
+    #First-Name-input {
+      margin-inline-end: 10px;
+    }
+
+    #second-Name-input {
+      margin-inline-start: 10px;
+    }
+
+  #Country-input {
+      margin-inline-end: 10px;
+    }
+
+    #Pincode-input {
+      margin-inline-end: 10px;
+      margin-inline-start: 2%;
+    }
+
+    #City-input {
+
+      width: 200%;
+    }
+
+    #Phone-input {
+      margin-inline-end: 10px;
+
+    }
+
+    #Email-input{
+      margin-inline-start: 10px;
+    }
+
+    .container2 {
+      margin-top: 200px;
+    }
+
+    /* For screens larger than 510px */
+    /*Education-Form*/
+    .form-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    .form-step {
+      display: none;
+      transform-origin: initial;
+      animation: animate 0.5s;
+    }
+
+    .form-step-active {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .form-col {
+      flex: 1;
+      margin-right: 1em;
+    }
+    
+    #img-container{
+      justify-content: center;
+      text-align: center;
+    }
+    /* For screens smaller than 510px */
+    @media screen and (max-width: 510px) {
+      .form-container {
+        display: flex;
+        flex-direction: column;
+      }
+      #Degree-input{
+   width: 50%;
+   }
+      .form-row {
+        flex-direction: column;
+        margin-bottom: 1em;
+      }
+
+      .form-col {
+        margin-right: 0;
+      }
+    }
+
+   #Degree-input{
+    max-width:500px;
+   }
+    #labelProfession{
+      margin-left: -620px;
+      text-align: left;
+      display: block;
+    }
+ 
+    #first img{
+    height: 170px;
+ 
+    }
+    #profile-img{
+      width: 150px;
+    }
+    .btn-next{
+      color: white;
+      background-color: orangered;
+    }
+    .btn-next:hover{
+      color: orangered;
+      background-color: black;
+    }
+    .btn-prev{
+      color: white;
+      background-color: orangered;
+    }
+    .btn-prev:hover{
+      color: orangered;
+      background-color:black;
+    }
+    .btn{
+      background-color:teal;
+    }
+  #info-user{
+    margin-bottom: 40px;
+    margin-top: -100px;
+  }
+  #cvggnbtn{
+    display: none;
+  }
+  #img-container{
+  width: 200px;
+  height: 210px;
+  border: 2px solid #dddddd;
+  cursor: pointer;
+
+ 
+  }
+  #previewText {
+    margin-top: -1.59rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #innerSpan {
+    text-align: center;
+    font-size: 14px;
+  }
+  #previewText:hover {
+    background-color: #dddddd66;
+  }
+  #photo {
+    display: none;
+    width: 200px;
+    height: 230px;
+  }
+  #inpImg {
+    display: none;
+  }
+  .btn-upload {
+    
+    background-color:orangered;
+    border: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 25%;
+
+    border-radius: 30px;
+  }
+  #uimg{
+    padding: 0.5rem; 
+    background-color:rgb(14, 78, 101); 
+    border-radius: 5%;
+    color: #fff;
+    font-size: 1rem; 
+    z-index:999;
+  }
+  .templateimg{
+    border: 1px solid black;
+    height: 280px;
+    z-index: -1;
+  }
+  #TemplatePreiew{
+margin-top: 10px;
+cursor: pointer;
+margin-left: 55px;
+ display: none;
+  }
+  #TemplatePreiews{
+margin-top: 10px;
+cursor: pointer;
+margin-left: 55px;
+
+  }
+#cv-template{
+  z-index: -10000;
+}
+#suggestions {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  max-height: 200px;
+  max-width: 200px;
+  overflow-y: scroll;
+  background-color: #f1f1f1;
+}
+
+.suggestion {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion:hover {
+  background-color: #ddd;
+}
+
+.wrapper-btn{
+  margin-bottom: 20px;
+}
+.btn-prev{
+
+margin-left: -250px;
+}
+.btn-next{
+
+margin-left: 450px;
+}
+.form-step h1{
+margin-bottom: 50px;
+margin-top: -100px;
+}
+#info-user{
+display: none;
+}
+#work-expereince-add-btn{
+ 
+margin-top: -200px;
+  background: transparent;
+  color: blue;
+  border: none;
+}
+#work-expereince-add-btn-div{
+  margin-top: -40px;
+  margin-bottom: 10px;
+}
+
+#work-expereince-textareaT {
+word-wrap: break-word;
+}
+.Editor-Template{
+  display: flex;
+  justify-content: center;
+ gap: 200px;
+}
+#sidebar {
+ 
+  top: 200px;
+  left: 0px;
+  width: 200px;
+  
+  background-color: #333;
+  color: #fff;
+}
+
+#sidebar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#sidebar ul li {
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.content {
+  margin-left: 200px;
+  padding: 20px;
+}
+.Colors-section{
+  font-size: 20px;
+  margin-bottom: 100px;
+
+  
+}
+
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo"><span style="color:orangered;"><b>Resume</b></span> B..</a>
+    <button class="btn btn-danger" onclick="logout()">Logout</button>
+  </header><br><br><br><br><br><br><br><br>
+
+  <div class="form-step form-step-active">
+    <center><div  id="info-user">
+      <span id="user" class="message">Hello, < email-id ></Email-id></span>
+      <div class="success"><span>Welcome to Resume-Builder You are successfully loged in!!!</span></div><br/>
+
+  </div></center>
+<center><h1>Personal Data</h1></center>
+
+  <!-- <button onclick="handleSubmit()">Submit</button> -->
+  <p id="nameT"></p>
+  </center>
+    <div class="wrappers">
+   <center>  <div id="img-container">
+       
+        <img src="" alt="" id="photo"> <br>
+        <span id="previewText"><span id="innerSpan"><i class="fas fa-upload me-2"></i>Select
+          Image</span></span>
+      <center>  <i class="fa fa-edit" id="changeicon" aria-hidden="true" style="font-size: 2.5rem; margin-top: -3rem;"></i></center>
+         <div class="btnk">
+         </div></center><br><br><br><br>
+       
+         
+      <!-- <button class="btn-upload" id="uploadBtn">Upload</button> -->
+
+      
+     
+      <form>
+        <div class="input-groups">
+          <input type="text" name="input1" placeholder="First Name" id="First-Name-input">
+          <input type="text" name="input2" placeholder="Last Name" id="Second-Name-input">
+        </div>
+    
+        <input type="text" name="input3" placeholder="Profession" id="Profession-input">
+        <div class="input-groups" id="row3">
+          <input type="text" name="input4" placeholder="Country" id="Country-input">
+          <input type="text" name="input5" placeholder="Pincode" id="Pincode-input">
+          <input type="text" name="input6" placeholder="City" id="City-input">
+        </div>
+        <div class="input-groups">
+          <input type="text" name="input7" placeholder="Phone" id="Phone-input">
+          <input type="text" name="input8" placeholder="Email" id="Email-input">
+        </div>
+        <div class="input-groups">
+<textarea  cols="30" rows="10" type="text" id="Introduction-input" placeholder="Introduction Summary"></textarea>
+        </div>
+       
+      </form>
+      <div class="wrapper-btn" >
+       <div>   <img class="templateimg" src="Template1.png"  alt="" height="350px" onmouseover="templatepreviewbtn()" > 
+        <button class="btn btn-primary" id="TemplatePreiew" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">Preview</button></div>
+
+     
+      </div>
+    </div>
+  
+    <div class="wrapper-btn">
+      <button class="btn btn-next" onclick="handleSubmit()">Next</button>
+   
+    </div>
+  </div>
+
+  <div class="form-step">
+    <center><h1>Work Experience</h1></center>
+    <div class="wrappers" >
+      <form class="myform" id="Work-expereince-add-inputs-div">
+        <div class="form-row">
+          <div class="form-col">
+            <label for="input1a">Jobtitle</label>
+            <input type="text" id="Jobtitle-input" name="input1a">
+          </div>
+          <div class="form-col">
+            <label for="input1a">Employer</label>
+            <input type="text" id="Employer-input" name="input1b">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col">
+            <label for="input2a">City</label>
+            <input type="text" id="City-input-Workexperience" name="input2a">
+          </div>
+          <div class="form-col">
+            <label for="input2b">Country</label>
+            <input type="text" id="Country-input-Workexperience"  name="input2b">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col">
+            <label for="input3a">Start Date</label>
+            <input type="date" id="StartDate-WorkEx-input" name="input3a">
+          </div>
+          <div class="form-col">
+            <label for="input3b">End Date</label>
+            <input type="date" id="EndDate-WorkEx-input" name="input3b">
+          </div>
+        </div>
+      
+
+<div class="wrapper-btn">
+
+<div class="textarea-div">
+
+  <div class="input-groups">
+  <div class="form-row">
+    <div class="form-col">
+      <textarea  cols="80" rows="10" type="text" id="Work-Ex-textarea" placeholder="Introduction Summary"></textarea>
+    </div>
+  </div>
+
+
+            </div>
+</div>
+</div>
+
+      </form>
+      <div class="wrapper-btn" >
+        <div>   <img class="templateimg" src="Template1.png"  alt="" height="350px" onmouseover="templatepreviewbtn()" > 
+         <div>
+
+          <button class="btn btn-primary" id="TemplatePreiews" data-bs-toggle="modal"
+          data-bs-target="#exampleModal">Preview</button></div>
+         </div>
+   
+ 
+      
+       </div>
+    </div>
+    <div class="form-row" id="work-expereince-add-btn-div">
+      <div class="form-col">
+       <button id="work-expereince-add-btn" onclick="addworkexperienceinput()"><i class="fa-solid fa-plus"></i> add one more work-expereince</button> <br>
+       <button id="work-expereince-Remove-btn" onclick="workexpereinceRemovebtnfnc()"><i class="fa-solid fa-plus"></i> Remove one more work-expereince</button>
+      </div>
+    </div>
+        <div class="wrapper-btn">
+          <button class="btn btn-prev"  >previous</button>
+          <button class="btn btn-next" onclick=" Workexperiencedata()">Next</button>
+        </div>
+  </div>
+  
+  <div class="form-step">
+    <center><h1>Education Information</h1></center>
+    <div class="wrappers" id="Education-Form-add">
+      <form class="myform">
+        <div class="form-row">
+          <div class="form-col">
+            <label for="School Name">School Name</label>
+            <input type="text" id="School-Name-input" name="input1a">
+          </div>
+          <div class="form-col">
+            <label for="School-Location-input">School Location</label>
+            <input type="text" id="School-Location-input" name="input1b">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col">
+            <label for="Degree-input">Degree</label>
+            <input type="text" id="Degree-input" name="input2a">
+          </div>
+          <div class="form-col">
+            <label for="Field-of-Study">Field of Study</label>
+            <input type="text" id="Field-of-Study"  name="input2b">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col">
+            <label for="Graduation-Start-Date">Graduation Start Date</label>
+            <input type="date" id="Graduation-Start-Date" name="input3a">
+          </div>
+          <div class="form-col">
+            <label for="Graduation-End-Date">Graduation End Date</label>
+            <input type="date" id="Graduation-End-Date" name="input3b">
+          </div>
+        </div>
+      
+
+<div class="wrapper-btn">
+
+<div class="textarea-div">
+
+  <div class="input-groups">
+  <div class="form-row">
+    <div class="form-col">
+      <textarea  cols="90" rows="10" type="text" id="Education-textarea" placeholder="Introduction Summary"></textarea>
+    </div>
+  </div>
+
+
+            </div>
+</div>
+</div>
+<div class="form-row" id="work-expereince-add-btn-div">
+  <div class="form-col">
+   <button id="work-expereince-add-btn"><i class="fa-solid fa-plus"></i> add one more work-expereince</button>
+  </div>
+</div>
+      </form>
+      <div class="wrapper-btn" >
+        <div>   <img class="templateimg" src="Template1.png"   alt="" height="350px" onmouseover="templatepreviewbtn()" > 
+         <div>
+
+          <button class="btn btn-primary" id="TemplatePreiews" data-bs-toggle="modal"
+          data-bs-target="#exampleModal">Preview</button></div>
+         </div>
+   
+ 
+      
+       </div>
+    </div>
+    <div class="wrapper-btn">
+      <button class="btn btn-prev">previous</button>
+      <button class="btn btn-primary " id="Genrate-CV" onclick="academicdata()">Generate CV</button>
+      <button class="btn btn-primary " id="cvggnbtn">Print CV</button></div>
+ </div>
+<!-- 
+ <div class="form-step ">
+  <center><h1>Editor</h1></center>
+  <div class="Colors-section">
+    <center>
+      <input type="radio" id="color-template" name="color" value="default">Default
+    <input type="radio" id="color-template" name="color" value="blue">Bule    
+    <input type="radio" id="color-template" name="color" value="red">red 
+    <input type="radio" id="color-template"  name="color" value="green">green
+    <input type="radio" id="color-template" name="color" value="black">black
+    <input type="radio" id="color-template" name="color" value="yellow">yellow
+    <input type="radio" id="color-template" name="color" value="grey">grey
+    <input type="radio" id="color-template" name="color" value="pink">pink
+    <button onclick="colorchangere()" >save</button>
+  </center>
+  </div>
+<div class="Editor-Template">
+  <div>
+    <div id="sidebar">
+      <h4>Resume Section</h4>
+      <ul>
+        <li><a href="personaldata.html"><i class="fa-sharp fa-regular fa-file"></i>Personal Data</a></li>
+        <li><a href="workinfo.html"><i class="fa-sharp fa-regular fa-file"></i>WorkExperience</a></li>
+        <li><a href="edu.html"><i class="fa-sharp fa-regular fa-file"></i>Education</a></li>
+        <li><a href="#"><i class="fa-sharp fa-regular fa-file"></i>Skill</a></li>
+      </ul>
+    </div>
+    
+
+    
+  </div>
+ 
+
+   
+  <div class="Template-preview-Editor"> 
+  <div class="container" id="cv-template">
+    <div class="row1  " id="cv-template" >
+      <div class=" text-center background  " id="firsts" >
+        <img src="./NFT.png" class="img-fluid myimg mt-4" alt="" id="photo">
+        <div class="container" id="presnol-info">
+        
+          
+          <h1 id="FirstnameT">Himanshu </h1>
+            <h1 id="LastnameT"></h1>
+          <p id="ProfessionT">Profession</p>
+          <h4 id="contactT">Contact   </h4>
+          <p id="addressT"> <b>Addess</b> </p> -->
+          <!-- <p id="addressTinfo2"></p>
+          <p id="CountryT"></p>
+          <p id="CityT"></p> -->
+          <!-- <p id="pincodeT"></p>
+          <p id="PhoneT"> <b>Phone</b> </p>
+          <p id="PhoneNumberT"></p>
+          <p id="EmailT"> <b>E-mail</b> </p>
+          <p id="EmailidT"></p>
+          
+        </div>
+      </div>
+     
+      <div class="  py-5 " id="second">
+    
+        <p class="" id="IntroductionT">To seek and maintain full-time position that offers professional challenges utilizing interpersonal skills, excellent time management and problem-solving skills.</p>
+        <div class="card mt-4" id="Work-Experience-Div">
+          <div class="card-header " id="abc">
+            
+          <h3>Work History</h3>
+          </div>
+          <div class="card-body" >
+            <div class="container">
+              <div class="row1">
+<div id="first"><p id="Work-Ex-date">22/01/22</p></div>
+
+            <div id="secondT">
+              <h5 id="JobtitleT">Software Engineer</h5>
+            
+            <p id="work-ex-address">Shirpur,India</p>
+   
+        <p id="work-expereince-textareaT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, tempora!</p>
+            </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mt-4" id="cardEducationid">
+          <div class="card-header "id="abc">
+          <h3>Education</h3>
+          </div>
+          <div class="card-body" >
+            <div class="container">
+              <div class="row1">
+<div id="first">
+  <p id="School-Ex-date">22/01/22</p></div>
+
+            <div id="secondT">
+              <h5 id="DegreeT">Software Engineer</h5>
+            
+              <p id="School-Name-Addrres">Himanshu,Shirpur</p>
+   
+             <p id="Education-textareaT">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, perspiciatis</p>
+           
+           
+            </div>
+
+              </div> -->
+            <!-- <ul id="weT">
+              <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel iste voluptatibus rerum possimus ipsa obcaecati asperiores accusantium sed nihil aperiam?</li>
+            </ul> -->
+          <!-- </div>
+        </div>
+        </div>
+        <div class="card mt-4" id="cardid">
+          <div class="card-header "id="abc">
+          <h3>Certification</h3>
+          </div>
+          <div class="card-body">
+            <ul id="AcadmicT">
+              <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel iste voluptatibus rerum possimus ipsa obcaecati asperiores accusantium sed nihil aperiam?</li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+     
+    </div>
+  </div>
+</div>
+</div>
+</div> -->
+
+
+
+  
+
+    <!-- <button type="button" class="btn btn-primary" id="hidetemplatebtn" data-bs-toggle="modal"
+      data-bs-target="#exampleModal">
+      Launch demo modal
+    </button>  -->
+
+  <!-- Modal -->
+ <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Resume Preview</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+
+            <div class="container" id="cv-template">
+              <div class="row1  " id="cv-template" >
+                <div class=" text-center background  " id="first" >
+                  <img src="./NFT.png" class="img-fluid myimg mt-4" alt="" id="photo">
+                  <div class="container" id="presnol-info">
+                  
+                    
+                    <h1 id="FirstnameT">Himanshu </h1>
+                      <h1 id="LastnameT"></h1>
+                    <p id="ProfessionT">Profession</p>
+                    <h4 id="contactT">Contact   </h4>
+                    <p id="addressT"> <b>Addess</b> </p>
+                    <!-- <p id="addressTinfo2"></p>
+                    <p id="CountryT"></p>
+                    <p id="CityT"></p> -->
+                    <p id="pincodeT"></p>
+                    <p id="PhoneT"> <b>Phone</b> </p>
+                    <p id="PhoneNumberT"></p>
+                    <p id="EmailT"> <b>E-mail</b> </p>
+                    <p id="EmailidT"></p>
+                    
+                  </div>
+                </div>
+               
+                <div class="  py-5 " id="second">
+              
+                  <p class="" id="IntroductionT">To seek and maintain full-time position that offers professional challenges utilizing interpersonal skills, excellent time management and problem-solving skills.</p>
+                  <div class="card mt-4" id="Work-Experience-Div">
+                    <div class="card-header " id="abc">
+                      
+                    <h3>Work History</h3>
+                    </div>
+                    <div class="card-body" >
+                      <div class="container">
+                        <div class="row1">
+          <div id="first"><p id="Work-Ex-date">22/01/22</p></div>
+          
+                      <div id="secondT">
+                        <h5 id="JobtitleT">Software Engineer</h5>
+                      
+                      <p id="work-ex-address">Shirpur,India</p>
+             
+                  <p id="work-expereince-textareaT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, tempora!</p>
+                      </div>
+    
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card mt-4" id="cardEducationid">
+                    <div class="card-header "id="abc">
+                    <h3>Education</h3>
+                    </div>
+                    <div class="card-body" >
+                      <div class="container">
+                        <div class="row1">
+          <div id="first">
+            <p id="School-Ex-date">22/01/22</p></div>
+          
+                      <div id="secondT">
+                        <h5 id="DegreeT">Software Engineer</h5>
+                      
+                        <p id="School-Name-Addrres">Himanshu,Shirpur</p>
+             
+                       <p id="Education-textareaT">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, perspiciatis</p>
+                     
+                     
+                      </div>
+          
+                        </div>
+                      <!-- <ul id="weT">
+                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel iste voluptatibus rerum possimus ipsa obcaecati asperiores accusantium sed nihil aperiam?</li>
+                      </ul> -->
+                    </div>
+                  </div>
+                  </div>
+                  <div class="card mt-4" id="cardid">
+                    <div class="card-header "id="abc">
+                    <h3>Certification</h3>
+                    </div>
+                    <div class="card-body">
+                      <ul id="AcadmicT">
+                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel iste voluptatibus rerum possimus ipsa obcaecati asperiores accusantium sed nihil aperiam?</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                </div>
+               
+              </div>
+            </div>
+            </div>
+           
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  <script>
+    const prevBtns = document.querySelectorAll(".btn-prev");
+    const nextBtns = document.querySelectorAll(".btn-next");
+    const formSteps = document.querySelectorAll(".form-step");
+
+    let formStepsNum = 0;
+
+    nextBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        formStepsNum++;
+        updateFormSteps();
+      });
+    });
+
+    prevBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        formStepsNum--;
+        updateFormSteps();
+      });
+    });
+
+    function updateFormSteps() {
+      formSteps.forEach((formStep) => {
+        formStep.classList.contains("form-step-active") &&
+          formStep.classList.remove("form-step-active");
+      });
+
+      formSteps[formStepsNum].classList.add("form-step-active");
+    }
+
+  </script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-storage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+    <script src="firebase.js"></script>
+  <script  src="formscript.js"></script>
+</body>
+
+</html>

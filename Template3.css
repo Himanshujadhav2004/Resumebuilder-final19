@@ -1,0 +1,205 @@
+/* #cv-form{
+   display: none;
+} */
+
+.background{
+    background-color:white;
+    color: black;
+ }
+ 
+ .row1{
+    display: flex;
+    flex: auto;
+ grid-gap: 20px;
+
+ 
+ }
+ #firsts{
+    min-width: 200px;
+    margin-left: -12px;
+ 
+ }
+ 
+ .card{
+    min-width: 300px;
+ }
+ #hidetemplatebtn{
+ display: none;
+ }
+ #NameT2{
+    text-align: justify;
+ }
+ #NameT{
+    font-size: 35px;
+    text-align: justify;
+ }
+ #presnol-info{
+    text-align: left;
+ }
+
+ #addressT{
+    font-weight: 900px;
+    font-size: 15px;
+    
+ }
+ #pincodeT{
+    text-align: left;
+    word-wrap: break-word;
+      margin-top: -10px;
+ }
+ #addressTinfo{
+    text-align: left;
+  word-wrap: break-word;
+    margin-top: -10px;
+ }
+ #addressTinfo2{
+    text-align: left;
+  word-wrap: break-word;
+    margin-top: -10px;
+ }
+ #PhoneNumberT{
+    text-align: left;
+    word-wrap: break-word;
+      margin-top: -10px;
+ }
+ #EmailidT{
+    text-align: left;
+    word-wrap: break-word;
+      margin-top: -10px;
+ }
+ .card{
+    
+    border: none;
+ }
+ #abc{
+    /* border-top: 1px solid black ; */
+ border-radius: 0;
+ color:black;
+ background-color: white;
+    border-bottom: 1px solid black ;
+ }
+ .objectiveT
+ {
+ 
+   text-align: justify;
+ }
+ 
+ @media(max-width: 768px) {
+    /* .row1{
+     justify-content: space-around;
+    
+    } */
+  }
+  
+  #LastnameT{
+    margin-top: -10px;
+  }
+  /* #cv-form{
+    display: none;
+ } */
+ /* .myimg{
+   
+    border: 1px solid red;
+ } */
+ #firsts{
+    background-color:rgb(39, 39, 80);
+ 
+    color: white;
+ }
+ 
+ .row1{
+    display: flex;
+  
+ grid-gap: 20px;
+ 
+ 
+ }
+ #first{
+    min-width: 200px;
+    margin-left: -12px;
+ }
+ 
+ .card{
+    min-width: 200px;
+ }
+ /* #hidetemplatebtn{
+ display: none;
+ } */
+ #NameT2{
+    text-align: justify;
+ }
+ #NameT{
+    font-size: 35px;
+    text-align: justify;
+ }
+ #presnol-info{
+    text-align: left;
+ }
+ #contactT{
+    background-color:white;
+    border-bottom: 1px solid black;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    margin-left: -5px;
+    padding-bottom:8px;
+ }
+ #addressT{
+    font-weight: 300px;
+    font-size: 15px;
+ }
+ #addressTinfo{
+    text-align: left;
+  word-wrap: break-word;
+    margin-top: -10px;
+ }
+ #card{
+    
+    border: none;
+ }
+ #abc{
+    border-top: none;
+ border-radius: 0;
+ color:black;
+ background-color: white;
+    border-bottom: 1px solid black ;
+ }
+ #presnol-info{
+    max-width: 200px;
+ }
+ #second{
+    max-width: 560px;
+ }
+ #work-expereince-textareaT{
+    width: 300px;
+    
+ }
+ #Education-textareaT{
+    width: 300px;
+ }
+ #IntroductionT{
+    word-wrap: break-word;
+ }
+ /* .container {
+ 
+    overflow: auto;
+  }
+  */
+  .container h1{
+    word-wrap: break-word;
+  }
+ #row2{
+    /* background-color: #343434; */
+margin: 0;
+padding: 0;
+ }
+ 
+/* #row1id{
+   display: flex;
+   flex: auto;
+grid-gap: 20px;
+flex-direction: row;
+} */
+#containerheader{
+    padding: 0;
+    margin: 0;
+}

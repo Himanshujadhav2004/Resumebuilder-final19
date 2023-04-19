@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>templates</title>
+</head>
+<style> 
+    .handwash .heading {
+    text-align: center;
+    padding: 1rem;
+    font-size: 3rem;
+}
+
+.handwash .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.handwash .box-container .box {
+    background: #fff;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.668);
+    margin: 2rem;
+    margin-top: 3rem;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.handwash .box-container .box img {
+    height: 22rem;
+    width: 20.5rem;
+    transition: 1s;
+}
+ .box img:hover {
+    transform: scale(1.2);
+		z-index: 2;
+        cursor: grab;
+}
+
+.handwash .box-container .box h3 {
+    font-size: 1.5rem;
+    color: #666;
+    /* padding: 1rem 0; */
+}
+.btn{
+    transition: 1s;  
+}
+.btn:hover{
+    background-color: rgb(246, 66, 0);
+    cursor: grab;
+    transform: scale(1.2);
+		z-index: 2;
+}
+
+.footer {
+    min-height: auto;
+    padding-top: 0;
+}
+
+.footer .box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center
+}
+
+.footer .box-container .box {
+    flex: 1 1 25rem;
+    
+}
+
+.footer .box-container .box h3 {
+    font-size: 1.8rem;
+    color: rgb(14, 78, 101);
+    font-weight:bold;
+}
+
+.footer .box-container .box p {
+    font-size: 1.2rem;
+    color: rgb(14, 78, 101);
+}
+
+.footer .box-container .box p i {
+    padding-right: 1rem;
+    color: rgb(150, 200, 13);
+}
+
+.footer .credit {
+    padding: 0.5rem 0rem;
+    text-align: center;
+    color: rgb(14, 78, 101);
+    font-weight: normal;
+    border-top: .1rem solid black;
+}
+
+.footer .credit a {
+    color: rgb(150, 200, 13);
+    text-decoration: none;
+}
+
+</style>
+<body>
+    
+    <section class="handwash" id="handwash">
+
+        <h1 class="heading">👇 choose <span style="color: rgb(14, 78, 101);;">templates</span></h1> 
+     <h3 class="heading" style="font-size: 2rem;color: rgb(4, 4, 102);">🔰 choose the various template for created a resume 🔰</h3>
+        <div class="box-container">
+    
+            <div class="box">
+                <img src="Template1.png" alt="">
+                <h3>🔅 Template: 1</h3>
+                <a onclick="display()" ><button class="btn"   style="padding: 0.5rem; background-color:rgb(14, 78, 101); border-radius: 3%;color: #fff;
+                    font-size: 1rem; ">choose template</button></a>
+            </div>
+    
+            <div class="box">
+                <img src="template2.png" alt="">
+                <h3>🔅 Template: 2</h3>
+                <a onclick="display()"><button class="btn"   style="padding: 0.5rem; background-color:rgb(14, 78, 101); border-radius: 3%;color: #fff;
+                    font-size: 1rem;">choose template</button></a>
+            </div>
+    
+            <div class="box">
+                <img src="Template3.png" alt="">
+                <h3>🔅 Template: 3</h3>
+                <a onclick="display()"><button class="btn"   style="padding: 0.5rem; background-color:rgb(14, 78, 101); border-radius: 3%;color: #fff;
+                    font-size: 1rem;">choose template</button></a>
+            </div>
+    
+            <div class="box">
+                <img src="image\temp4.png" alt="">
+                <h3>🔅 Template: 4</h3>
+                <a onclick="display()"><button class="btn"  style="padding: 0.5rem; background-color:rgb(14, 78, 101); border-radius: 3%;color: #fff;
+                    font-size: 1rem;">choose template</button></a>
+            </div>
+
+            <div class="box">
+                <img src="image\temp5.png" alt="">
+                <h3>🔅 Template: 5</h3>
+                <a onclick="display()"><button class="btn" style="padding: 0.5rem; background-color:rgb(14, 78, 101); border-radius: 3%;color: #fff;
+                    font-size: 1rem;">choose template</button></a>
+            </div>
+    
+            <div class="box">
+                <img src="image\temp6.png" alt="">
+                <h3>🔅 Template: 6</h3>
+                <a onclick="display()"><button class="btn" style="padding: 0.5rem; background-color:rgb(14, 78, 101); border-radius: 3%;color: #fff;
+                    font-size: 1rem;">choose template</button></a>
+            </div>   
+        </div>
+    </section>
+    <section class="footer">
+
+        <div class="box-container">
+    
+            <div class="box">
+                <h3>contact info</h3>
+                <p> <i class="fas fa-phone"></i> +123-456-7890. </p>
+                <p> <i class="fas fa-envelope"></i> example@gmail.com </p>
+                <p> <i class="fas fa-map-marker-alt"></i> mumbai, indai - 400104. </p>
+            </div>
+    
+        </div>
+    
+        <h1 class="credit"> created by <a href="#">Group No: 14 </a> all rights reserved! </h1>
+    
+    </section>
+    <script>
+function display(){
+    alert("Please First Sign-UP/Login");
+}
+    </script>
+</body>
+</html>
